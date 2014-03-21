@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row-fluid">
+
+        <div class="col-md-2">
+            <!--Sidebar content-->
+            Search: <input ng-model="query">
+            <br><br>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+            </ul>
+            <!--Body content-->
+            <div class="list-group">
+                <div ng-repeat="timezone in timezones| filter:query" class="list-group-item">
+                    <a href="#/{{timezone.TimeZoneId}}">{{timezone.TimeZoneId}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
